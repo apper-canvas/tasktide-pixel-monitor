@@ -1,4 +1,4 @@
-import { useState, useEffect, React } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { toast } from 'react-toastify';
 import { format } from 'date-fns';
@@ -215,7 +215,7 @@ const MainFeature = ({ onTasksChange }) => {
             animate={{ rotate: isFormExpanded ? 180 : 0 }}
             transition={{ duration: 0.3 }}
           >
-            {getIcon('ChevronDown')({ className: "h-5 w-5 text-surface-500" })}
+            {React.createElement(getIcon('ChevronDown'), { className: "h-5 w-5 text-surface-500" })}
           </motion.div>
         </div>
         
@@ -442,7 +442,7 @@ const MainFeature = ({ onTasksChange }) => {
               className="text-center py-10 rounded-lg border-2 border-dashed border-surface-200 dark:border-surface-700"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-surface-100 dark:bg-surface-800 mb-4">
-                {getIcon('ClipboardList')({ className: "h-8 w-8 text-surface-400" })}
+                {React.createElement(getIcon('ClipboardList'), { className: "h-8 w-8 text-surface-400" })}
               </div>
               <h3 className="text-lg font-medium text-surface-800 dark:text-surface-200 mb-1">
                 {searchQuery 
