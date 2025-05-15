@@ -45,6 +45,10 @@ const Home = () => {
 
   // Current date display
   const currentDate = format(new Date(), 'EEEE, MMMM do');
+
+  useEffect(() => {
+    console.log('abcd', abcd);
+  }, [])
   
   return (
     <div className="min-h-screen">
