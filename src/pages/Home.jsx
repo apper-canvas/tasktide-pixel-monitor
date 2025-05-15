@@ -47,7 +47,7 @@ const Home = () => {
   const currentDate = format(new Date(), 'EEEE, MMMM do');
 
   useEffect(() => {
-    console.log('abcd', abcd);
+    console.log('abcd');
   }, [])
   
   return (
